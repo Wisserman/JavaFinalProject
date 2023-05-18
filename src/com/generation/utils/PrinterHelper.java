@@ -48,7 +48,7 @@ public class PrinterHelper
                 formatter.setLenient(false);
                 birthDate = formatter.parse( scanner.next());
             }
-            catch (Exception arg) {
+            catch (ParseException arg) {
                 exceptionThrown = true;
             }
         } while (exceptionThrown);
