@@ -41,7 +41,7 @@ public class Student
         //Search the courses ArrayList for a course with the specified course code
         for (Course course : courses) {
             //If coursecode is found return true
-            if (course.getCode() == courseCode) {
+            if (course.getCode().equals(courseCode)) {
                 return true;
             }
         }
