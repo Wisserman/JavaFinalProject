@@ -23,7 +23,11 @@ public class Student
 
     public void enrollToCourse( Course course )
     {
-        //TODO implement this method
+        //check if student is already enrolled in the course
+        if (!this.isAttendingCourse(course.getCode())) {
+            //If not, add course to courses ArrayList;
+            courses.add(course);
+        }
     }
 
     public void registerApprovedCourse( Course course )
@@ -34,7 +38,15 @@ public class Student
 
     public boolean isAttendingCourse( String courseCode )
     {
-        //TODO implement this method
+        //Search the courses ArrayList for a course with the specified course code
+        for (Course course : courses) {
+            //If coursecode is found return true
+            if (course.getCode() == courseCode) {
+                return true;
+            }
+        }
+
+        //otherwise return false
         return false;
     }
 
